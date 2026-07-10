@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>휴먼커넥트에듀센터 | 배움을 연결하고, 성장을 완성하다</title>
+<meta name="description" content="휴먼커넥트에듀센터는 기업, 공공기관, 학교·대학, 평생학습 현장에 맞는 교육과정 기획부터 강사 매칭, 콘텐츠 개발, 운영·평가까지 원스톱으로 지원하는 교육전문기관입니다.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#home" class="brand">
+      <img src="assets/logo-mark.png" alt="" class="brand-mark" width="40" height="40">
+      <img src="assets/logo-wordmark.png" alt="휴먼커넥트에듀센터" class="brand-wordmark">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" class="nav-link">홈</a>
+      <a href="#about" class="nav-link">회사소개</a>
+      <a href="#business" class="nav-link">사업영역</a>
+      <a href="#programs" class="nav-link">프로그램</a>
+      <a href="#contact" class="nav-link">문의하기</a>
+      <a href="#instructor" class="nav-link">강사신청</a>
+    </nav>
+
+    <div class="header-cta">
+      <a href="#contact" class="btn btn-primary btn-sm">
+        <span>교육 문의하기</span>
+        <svg class="btn-icon" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-blobs" aria-hidden="true">
+    <span class="blob blob-teal"></span>
+    <span class="blob blob-sky"></span>
+    <span class="blob blob-gold"></span>
+    <span class="blob blob-coral"></span>
+  </div>
+
+  <div class="hero-threads" aria-hidden="true">
+    <svg class="thread-svg" id="heroThread" viewBox="0 0 1200 600" preserveAspectRatio="none">
+      <path class="thread-path" d="M-20 480 C 180 420, 260 300, 420 320 S 620 460, 780 360 S 980 160, 1220 220"/>
+      <circle class="thread-node node-gold" cx="-20" cy="480" r="6"/>
+      <circle class="thread-node node-teal" cx="420" cy="320" r="6"/>
+      <circle class="thread-node node-sky" cx="780" cy="360" r="6"/>
+      <circle class="thread-node node-coral" cx="1220" cy="220" r="6"/>
+    </svg>
+  </div>
+
+  <div class="hero-inner">
+    <p class="eyebrow eyebrow-anim">LEARN · CONNECT · GROW</p>
+    <h1 class="hero-title">
+      <span class="reveal-line">배움을 연결하고,</span>
+      <span class="reveal-line">성장을 완성하다.</span>
+    </h1>
+    <p class="hero-brand reveal-fade">
+      <span class="hero-brand-line" aria-hidden="true"></span>
+      휴먼커넥트에듀센터
+      <span class="hero-brand-line" aria-hidden="true"></span>
+    </p>
+    <p class="hero-sub reveal-fade">사람과 조직을 함께 성장시키는 교육전문기관</p>
+    <p class="hero-desc reveal-fade">
+      휴먼커넥트에듀센터는 기업, 공공기관, 학교·대학, 평생학습 현장의 특성에 맞는 교육과정을 기획하고
+      강사 매칭, 콘텐츠 개발, 운영·평가까지 <strong>원스톱</strong>으로 지원합니다.
+    </p>
+    <div class="hero-actions reveal-fade">
+      <a href="#contact" class="btn btn-primary">
+        <span>교육 문의하기</span>
+        <svg class="btn-icon" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#instructor" class="btn btn-outline">
+        <svg class="btn-icon btn-icon-lead" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 16c0-2.8 2.5-4.5 5.5-4.5s5.5 1.7 5.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span>협력 강사 신청하기</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- ================= INFO BAR ================= -->
+<section class="info-bar">
+  <div class="info-bar-inner">
+    <div class="info-item">
+      <span class="info-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M11.54 22.351l.07.04a.75.75 0 00.723 0l.071-.04a17.15 17.15 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282c.44.312.809.555 1.145.742h.056zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+      </span>
+      <span>부산시 가야대로 288 창조상가 113호</span>
+    </div>
+    <div class="info-divider" aria-hidden="true"></div>
+    <div class="info-item">
+      <span class="info-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"/></svg>
+      </span>
+      <span>010-5164-3724</span>
+    </div>
+    <div class="info-divider" aria-hidden="true"></div>
+    <div class="info-item">
+      <span class="info-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd"/></svg>
+      </span>
+      <span>김경민 센터장</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <p class="eyebrow eyebrow-dark">About Us</p>
+    <h2 class="section-title">사람과 조직, 두 개의 성장</h2>
+    <p class="section-lead">
+      교육의 성과는 <strong>정확한 진단과 맞춤형 실행</strong>에서 시작됩니다.
+      교육의 기획부터 강사 매칭, 콘텐츠 개발, 운영, 환류 평가까지
+      휴먼커넥트에듀센터는 직접 설계하고 책임지는 프로그램으로 운영합니다.
+    </p>
+
+    <div class="values-grid">
+      <article class="value-card">
+        <span class="value-circle value-circle-teal" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none"><path d="M14 6l9 4-9 4-9-4 9-4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 14v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5" stroke="currentColor" stroke-width="1.7"/></svg>
+        </span>
+        <span class="value-tag">LEARN</span>
+        <h3>배우다</h3>
+        <p>현장의 언어로 설계된 커리큘럼과 검증된 강사진이 실질적인 역량 변화를 이끕니다.</p>
+      </article>
+      <article class="value-card">
+        <span class="value-circle value-circle-sky" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none"><circle cx="8" cy="9" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="20" cy="9" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="14" cy="20" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M10.5 10.5L17.5 10.5M9.5 11.7L12.7 17.3M18.5 11.7L15.3 17.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <span class="value-tag">CONNECT</span>
+        <h3>연결하다</h3>
+        <p>기관, 강사, 참여자, 콘텐츠를 유기적으로 연결해 교육의 효과를 끝까지 이어갑니다.</p>
+      </article>
+      <article class="value-card">
+        <span class="value-circle value-circle-gold" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none"><path d="M6 21h16M9 21v-6M14 21v-9M19 21v-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M6 11l5-5 4 3 6-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 3h4v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="value-tag">GROW</span>
+        <h3>성장하다</h3>
+        <p>기획–운영–평가의 순환을 통해 사람과 조직이 함께 다음 단계로 나아가게 합니다.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUSINESS / SERVICES ================= -->
+<section class="section section-alt" id="business">
+  <div class="section-inner">
+    <p class="eyebrow eyebrow-dark">Our Services</p>
+    <h2 class="section-title">전문 영역</h2>
+    <p class="section-lead">교육 · 컨설팅 · 콘텐츠개발을 통합적으로 지원합니다.</p>
+
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M6 12h20a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V14a2 2 0 012-2z" stroke="currentColor" stroke-width="1.6"/><path d="M12 34l4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="30" cy="10" r="4" stroke="currentColor" stroke-width="1.6"/></svg>
+        </span>
+        <p class="service-eyebrow">Education</p>
+        <h3>교육</h3>
+        <p class="service-desc">사람과 조직의 성장을 위한 맞춤형 교육</p>
+        <ul class="service-list">
+          <li>기업교육</li>
+          <li>공공기관 교육</li>
+          <li>학교·대학 교육</li>
+          <li>금융·경제교육</li>
+          <li>리더십·CS·소통교육</li>
+          <li>창업 및 취업역량 교육</li>
+        </ul>
+      </article>
+
+      <article class="service-card">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M20 6a10 10 0 100 20 10 10 0 000-20z" stroke="currentColor" stroke-width="1.6"/><path d="M20 12v8l6 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 32h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <p class="service-eyebrow">Consulting</p>
+        <h3>컨설팅</h3>
+        <p class="service-desc">교육의 성과를 높이는 전문 컨설팅</p>
+        <ul class="service-list">
+          <li>교육과정 기획</li>
+          <li>교수설계 및 커리큘럼 개발</li>
+          <li>조직 역량진단</li>
+          <li>강사양성 TTT</li>
+          <li>HRD 컨설팅</li>
+          <li>ESG·평생교육 컨설팅</li>
+        </ul>
+      </article>
+
+      <article class="service-card">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M8 30l8-16 6 10 4-6 6 12H8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="13" cy="11" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
+        </span>
+        <p class="service-eyebrow">Content Development</p>
+        <h3>콘텐츠개발</h3>
+        <p class="service-desc">현장에서 바로 활용하는 교육콘텐츠 개발</p>
+        <ul class="service-list">
+          <li>교안 및 PPT 개발</li>
+          <li>교재·워크북 제작</li>
+          <li>활동형 프로그램 개발</li>
+          <li>교육 매뉴얼 제작</li>
+          <li>평가도구 개발</li>
+          <li>온라인 교육 콘텐츠 제작</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMS ================= -->
+<section class="section" id="programs">
+  <div class="section-inner">
+    <p class="eyebrow eyebrow-dark">Programs</p>
+    <h2 class="section-title">주요 프로그램</h2>
+    <p class="section-lead">현장의 요구에 맞춰 유연하게 설계되는 8가지 전문 교육 영역입니다.</p>
+
+    <div class="program-grid">
+
+      <article class="program-card">
+        <span class="program-icon"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="10" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 27c1-6 5-9 10-9s9 3 10 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <h3>HRD·조직역량 강화</h3>
+        <p>리더십과 협업 역량을 높여 조직 전체의 성과를 끌어올립니다.</p>
+      </article>
+
+      <article class="program-card">
+        <span class="program-icon"><svg viewBox="0 0 32 32" fill="none"><path d="M6 24V10a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H12l-6 6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+        <h3>CS·고객서비스 교육</h3>
+        <p>응대 품질과 소통 역량을 강화해 고객 만족도를 높입니다.</p>
+      </article>
+
+      <article class="program-card">
+        <span class="program-icon"><svg viewBox="0 0 32 32" fill="none"><path d="M5 24h22M9 24V14M15 24V9M21 24v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <h3>금융·경제교육</h3>
+        <p>생애주기별 재무 이해와 실용적인 경제 감각을 길러줍니다.</p>
+      </article>
+
+      <article class="program-card">
+        <span class="program-icon"><svg viewBox="0 0 32 32" fill="none"><path d="M16 5l3 6 6 1-4.5 4.5L21.5 23 16 19.5 10.5 23 11.5 16.5 7 12l6-1z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+        <h3>창업·취업 역량교육</h3>
+        <p>사업 기획부터 실전 취업 전략까지 실행력을 키웁니다.</p>
+      </article>
+
+      <article class="program-card">
+        <span class="program-icon"><svg viewBox="0 0 32 32" fill="none"><rect x="7" y="9" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M13 25h6M16 21v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <h3>AI·디지털 활용교육</h3>
+        <p>업무와 학습에 바로 쓰는 AI·디지털 도구 활용법을 안내합니다.</p>
+      </article>
+
+      <article class="program-card">
+        <span class="program-icon"><svg viewBox="0 0 32 32" fill="none"><path d="M6 12l10-5 10 5-10 5-10-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 15v6c0 1.5 2.7 3 6 3s6-1.5 6-3v-6" stroke="currentColor" stroke-width="1.5"/></svg></span>
+        <h3>강사양성·교육과정 개발</h3>
+        <p>강의 역량과 교육과정 설계 능력을 갖춘 전문 강사를 양성합니다.</p>
+      </article>
+
+      <article class="program-card">
+        <span class="program-icon"><svg viewBox="0 0 32 32" fill="none"><path d="M8 26V12l8-4 8 4v14" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M13 26v-6h6v6" stroke="currentColor" stroke-width="1.5"/></svg></span>
+        <h3>청소년·학교 교육</h3>
+        <p>자기이해와 진로, 사회정서역량을 키우는 학교 연계 프로그램입니다.</p>
+      </article>
+
+      <article class="program-card">
+        <span class="program-icon"><svg viewBox="0 0 32 32" fill="none"><path d="M16 6a10 10 0 110 20 10 10 0 010-20z" stroke="currentColor" stroke-width="1.5"/><path d="M16 10v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <h3>평생학습·생애설계</h3>
+        <p>인생 2막을 준비하는 생애설계와 평생학습 기회를 제공합니다.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section section-alt" id="contact">
+  <div class="section-inner">
+    <p class="eyebrow eyebrow-dark">Contact</p>
+    <h2 class="section-title">교육 문의</h2>
+    <p class="section-lead">휴먼커넥트에듀센터와 함께할 준비가 되셨나요? 아래 양식으로 편하게 문의해 주세요.</p>
+
+    <form class="edu-form" id="contactForm" novalidate>
+      <h3 class="form-subhead">기관 정보</h3>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="c-org">기관명 <span class="req">*</span></label>
+          <input type="text" id="c-org" name="org" required>
+        </div>
+        <div class="form-field">
+          <label for="c-org-type">기관 유형</label>
+          <select id="c-org-type" name="orgType">
+            <option value="" disabled selected>선택해 주세요</option>
+            <option>공공기관</option>
+            <option>기업</option>
+            <option>학교·대학</option>
+            <option>평생학습기관</option>
+            <option>소상공인</option>
+            <option>개인</option>
+            <option>기타</option>
+          </select>
+        </div>
+      </div>
+
+      <h3 class="form-subhead">담당자 정보</h3>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="c-name">담당자명 <span class="req">*</span></label>
+          <input type="text" id="c-name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="c-title">직책/직급</label>
+          <input type="text" id="c-title" name="title">
+        </div>
+        <div class="form-field">
+          <label for="c-phone">연락처 <span class="req">*</span></label>
+          <input type="tel" id="c-phone" name="phone" placeholder="010-0000-0000" required>
+        </div>
+        <div class="form-field">
+          <label for="c-email">이메일 <span class="req">*</span></label>
+          <input type="email" id="c-email" name="email" required>
+        </div>
+      </div>
+
+      <h3 class="form-subhead">교육 문의 내용</h3>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="c-topic">문의 분야 <span class="req">*</span></label>
+          <select id="c-topic" name="topic" required>
+            <option value="" disabled selected>선택해 주세요</option>
+            <option>교육 프로그램</option>
+            <option>컨설팅</option>
+            <option>콘텐츠 개발</option>
+            <option>강사 매칭</option>
+            <option>기타 문의</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="c-size">예상 교육 인원</label>
+          <input type="text" id="c-size" name="size" placeholder="예: 30명">
+        </div>
+        <div class="form-field">
+          <label for="c-date">희망 교육 일정</label>
+          <input type="text" id="c-date" name="date" placeholder="예: 2026년 9월 중">
+        </div>
+        <div class="form-field form-field-full">
+          <label for="c-message">문의 내용 <span class="req">*</span></label>
+          <textarea id="c-message" name="message" rows="5" required></textarea>
+        </div>
+      </div>
+
+      <label class="agree-row">
+        <input type="checkbox" name="agree" required>
+        <span>[필수] 개인정보 수집 및 이용에 동의합니다. <button type="button" class="link-btn" data-toggle="c-privacy">내용 보기</button></span>
+      </label>
+      <div class="privacy-detail" id="c-privacy" hidden>
+        <p><strong>수집 항목</strong> 기관명, 담당자명, 직책, 연락처, 이메일</p>
+        <p><strong>수집 목적</strong> 교육 문의 상담 및 회신</p>
+        <p><strong>보유 기간</strong> 문의 처리 완료 후 1년간 보관 후 파기</p>
+        <p>동의를 거부하실 수 있으며, 거부 시 문의 접수가 제한됩니다.</p>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-wide">
+        <span>교육 문의 보내기</span>
+        <svg class="btn-icon" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="form-success" id="contactSuccess" hidden>문의가 접수되었습니다. 빠르게 확인 후 연락드리겠습니다.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= INSTRUCTOR APPLICATION ================= -->
+<section class="section" id="instructor">
+  <div class="section-inner">
+    <p class="eyebrow eyebrow-dark">Instructor Network</p>
+    <h2 class="section-title">협력 강사 신청</h2>
+    <p class="section-lead">
+      휴먼커넥트에듀센터와 함께 현장을 만들어갈 전문 강사님을 찾습니다.
+      전문 분야와 경력을 남겨주시면 프로그램 매칭 시 우선 연락드립니다.
+    </p>
+
+    <form class="edu-form" id="instructorForm" novalidate>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="ins-name">성함 <span class="req">*</span></label>
+          <input type="text" id="ins-name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="ins-phone">연락처 <span class="req">*</span></label>
+          <input type="tel" id="ins-phone" name="phone" placeholder="010-0000-0000" required>
+        </div>
+        <div class="form-field">
+          <label for="ins-email">이메일 <span class="req">*</span></label>
+          <input type="email" id="ins-email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="ins-field">전문 분야 <span class="req">*</span></label>
+          <select id="ins-field" name="field" required>
+            <option value="" disabled selected>선택해 주세요</option>
+            <option>HRD·조직역량</option>
+            <option>CS·고객서비스</option>
+            <option>금융·경제교육</option>
+            <option>창업·취업 역량</option>
+            <option>AI·디지털 활용</option>
+            <option>강사양성·커리큘럼 개발</option>
+            <option>청소년·학교 교육</option>
+            <option>평생학습·생애설계</option>
+            <option>기타</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="ins-career">강의 경력</label>
+          <input type="text" id="ins-career" name="career" placeholder="예: 5년차">
+        </div>
+        <div class="form-field">
+          <label for="ins-org">소속 (선택)</label>
+          <input type="text" id="ins-org" name="org">
+        </div>
+        <div class="form-field form-field-full">
+          <label for="ins-intro">주요 강의 경력 및 소개 <span class="req">*</span></label>
+          <textarea id="ins-intro" name="intro" rows="5" placeholder="주요 강의 이력, 보유 자격, 강의 가능 지역 등을 자유롭게 적어주세요." required></textarea>
+        </div>
+        <div class="form-field form-field-full">
+          <p class="form-note">이력서·강의 프로필 파일은 신청 접수 후 안내드리는 이메일로 첨부해 보내주시면 확인 후 연락드립니다.</p>
+        </div>
+      </div>
+
+      <label class="agree-row">
+        <input type="checkbox" name="agree" required>
+        <span>[필수] 개인정보 수집 및 이용에 동의합니다. <button type="button" class="link-btn" data-toggle="ins-privacy">내용 보기</button></span>
+      </label>
+      <div class="privacy-detail" id="ins-privacy" hidden>
+        <p><strong>수집 항목</strong> 성함, 연락처, 이메일, 전문 분야, 경력 사항</p>
+        <p><strong>수집 목적</strong> 협력 강사 등록 및 프로그램 매칭 연락</p>
+        <p><strong>보유 기간</strong> 신청 처리 완료 후 1년간 보관 후 파기</p>
+        <p>동의를 거부하실 수 있으며, 거부 시 신청 접수가 제한됩니다.</p>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-wide">
+        <span>협력 강사 신청서 보내기</span>
+        <svg class="btn-icon" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="form-success" id="instructorSuccess" hidden>신청이 접수되었습니다. 검토 후 연락드리겠습니다.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo-mark.png" alt="휴먼커넥트에듀센터 로고" class="footer-mark" width="40" height="40">
+      <p class="footer-tagline">배움을 연결하고, 성장을 완성하다.</p>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="#about">회사 소개</a>
+      <a href="#business">사업 영역</a>
+      <a href="#programs">프로그램</a>
+      <a href="#contact">문의하기</a>
+      <a href="#instructor">강사 신청</a>
+    </nav>
+
+    <div class="footer-divider" aria-hidden="true"></div>
+
+    <div class="footer-meta">
+      <p><strong>휴먼커넥트에듀센터</strong> | 센터장 김경민 | 부산시 가야대로 288 창조상가 113호</p>
+      <p>TEL 010-5164-3724 | E-MAIL k2mroom@naver.com</p>
+      <p class="copyright">© 2026 HumanConnect EduCenter. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
