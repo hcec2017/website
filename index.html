@@ -1686,6 +1686,432 @@ section[id]{
     강의기획과 교육설계에 <strong>정확한 진단과 맞춤형 실행</strong>으로 국가·공공기관, 정부·공기업, 학교·대학 등 평생학습 현장의 특성에 맞도록 과정을 기획하고 콘텐츠 개발, 강사 매칭, 운영, 환류 평가까지 직접 설계하고 책임지는 운영 프로그램 운영
     </p>    </p>
 
+
+
+     /* =========================================================
+   조직도 Organization Chart
+   ========================================================= */
+.organization-section{
+  background:
+    radial-gradient(circle at 15% 15%, rgba(125,211,198,.14), transparent 28%),
+    radial-gradient(circle at 85% 20%, rgba(155,203,234,.16), transparent 30%),
+    linear-gradient(180deg, #fff 0%, #faf7f1 100%);
+}
+
+.organization-wrap{
+  width:100%;
+  max-width:1120px;
+  margin:0 auto;
+  padding-top:12px;
+}
+
+.org-chart{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* 공통 조직도 카드 */
+.org-card{
+  position:relative;
+  z-index:2;
+  background:rgba(255,255,255,.96);
+  border:1px solid rgba(38,52,74,.1);
+  border-radius:22px;
+  box-shadow:0 18px 42px -24px rgba(38,52,74,.32);
+  text-align:center;
+}
+
+.org-card-title{
+  color:#30435f;
+  font-size:1.08rem;
+  font-weight:800;
+  letter-spacing:-.02em;
+}
+
+.org-card-role{
+  margin-top:5px;
+  color:#68768a;
+  font-size:.84rem;
+  line-height:1.55;
+  word-break:keep-all;
+}
+
+/* 대표 */
+.org-ceo{
+  min-width:210px;
+  padding:21px 34px;
+  border-top:4px solid #3c5578;
+}
+
+.org-ceo::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  top:100%;
+  width:2px;
+  height:42px;
+  background:linear-gradient(
+    180deg,
+    rgba(60,85,120,.65),
+    rgba(60,85,120,.18)
+  );
+  transform:translateX(-50%);
+}
+
+/* 센터장 및 협력강사진 */
+.org-middle-row{
+  position:relative;
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr minmax(230px,280px) 1fr;
+  align-items:center;
+  margin-top:42px;
+}
+
+.org-director{
+  grid-column:2;
+  padding:23px 34px;
+  border-top:4px solid #45b39d;
+}
+
+.org-director::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  top:100%;
+  width:2px;
+  height:50px;
+  background:linear-gradient(
+    180deg,
+    rgba(69,179,157,.65),
+    rgba(69,179,157,.2)
+  );
+  transform:translateX(-50%);
+}
+
+.org-partners{
+  position:relative;
+  grid-column:3;
+  justify-self:center;
+  width:min(100%,280px);
+  padding:20px 25px;
+  background:linear-gradient(145deg,#edf8f6,#fff);
+  border:1px solid rgba(69,179,157,.24);
+}
+
+.org-partners::before{
+  content:'';
+  position:absolute;
+  right:100%;
+  top:50%;
+  width:calc(50% - 30px);
+  height:2px;
+  background:linear-gradient(
+    90deg,
+    rgba(69,179,157,.55),
+    rgba(69,179,157,.15)
+  );
+}
+
+.org-partners-number{
+  display:block;
+  margin-top:6px;
+  color:#2f8f7d;
+  font-size:1.38rem;
+  font-weight:900;
+}
+
+.org-partners-text{
+  margin-top:5px;
+  color:#69778a;
+  font-size:.82rem;
+}
+
+/* 부서 연결선 */
+.org-department-area{
+  position:relative;
+  width:100%;
+  margin-top:50px;
+  padding-top:42px;
+}
+
+.org-department-area::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:16.666%;
+  right:16.666%;
+  height:2px;
+  background:linear-gradient(
+    90deg,
+    rgba(60,85,120,.18),
+    rgba(60,85,120,.55),
+    rgba(60,85,120,.18)
+  );
+}
+
+.org-departments{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.org-department{
+  position:relative;
+  overflow:hidden;
+  min-height:100%;
+  padding:0;
+  text-align:left;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.org-department::before{
+  content:'';
+  position:absolute;
+  bottom:100%;
+  left:50%;
+  width:2px;
+  height:42px;
+  background:rgba(60,85,120,.34);
+  transform:translateX(-50%);
+}
+
+.org-department:hover{
+  transform:translateY(-5px);
+  border-color:transparent;
+  box-shadow:0 22px 45px -25px rgba(38,52,74,.35);
+}
+
+.org-department-head{
+  padding:25px 24px 22px;
+  text-align:center;
+}
+
+.org-department-head h3{
+  color:#30435f;
+  font-size:1.18rem;
+  font-weight:800;
+  letter-spacing:-.02em;
+}
+
+.org-director-label{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:10px;
+  padding:5px 12px;
+  border-radius:999px;
+  font-size:.72rem;
+  font-weight:700;
+}
+
+.org-team-leader{
+  margin:0 22px;
+  padding:11px 16px;
+  border-radius:12px;
+  text-align:center;
+  color:#43516a;
+  background:#f5f7fa;
+  font-size:.86rem;
+  font-weight:700;
+}
+
+.org-work-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px;
+  padding:22px;
+}
+
+.org-work-list li{
+  position:relative;
+  padding:11px 10px 11px 20px;
+  border-radius:11px;
+  background:#fafbfc;
+  color:#5c687b;
+  font-size:.82rem;
+  line-height:1.45;
+  word-break:keep-all;
+}
+
+.org-work-list li::before{
+  content:'';
+  position:absolute;
+  left:9px;
+  top:17px;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+}
+
+/* 부서별 색상 */
+.org-management{
+  border-top:4px solid #f0a49a;
+}
+
+.org-management .org-department-head{
+  background:linear-gradient(180deg,#fcedea,#fff);
+}
+
+.org-management .org-director-label{
+  color:#c8655b;
+  background:#fce7e3;
+}
+
+.org-management .org-work-list li::before{
+  background:#e8897e;
+}
+
+.org-education{
+  border-top:4px solid #75cfc2;
+}
+
+.org-education .org-department-head{
+  background:linear-gradient(180deg,#e5f7f3,#fff);
+}
+
+.org-education .org-director-label{
+  color:#298c7d;
+  background:#e0f5f0;
+}
+
+.org-education .org-work-list li::before{
+  background:#45b39d;
+}
+
+.org-business{
+  border-top:4px solid #92bfe1;
+}
+
+.org-business .org-department-head{
+  background:linear-gradient(180deg,#eaf4fb,#fff);
+}
+
+.org-business .org-director-label{
+  color:#497fa7;
+  background:#e5f1f9;
+}
+
+.org-business .org-work-list li::before{
+  background:#659fca;
+}
+
+/* 조직도 하단 안내 */
+.org-summary{
+  width:min(100%,820px);
+  margin:30px auto 0;
+  padding:18px 24px;
+  border-radius:16px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(38,52,74,.08);
+  color:#69768a;
+  text-align:center;
+  font-size:.87rem;
+  line-height:1.7;
+  word-break:keep-all;
+}
+
+/* 태블릿 */
+@media (max-width:900px){
+  .org-middle-row{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .org-director{
+    grid-column:1;
+    justify-self:center;
+    width:min(100%,280px);
+  }
+
+  .org-partners{
+    grid-column:1;
+    justify-self:center;
+    margin-top:28px;
+  }
+
+  .org-partners::before{
+    left:50%;
+    right:auto;
+    top:-28px;
+    width:2px;
+    height:28px;
+  }
+
+  .org-department-area{
+    margin-top:45px;
+  }
+
+  .org-department-area::before{
+    display:none;
+  }
+
+  .org-departments{
+    grid-template-columns:1fr;
+    max-width:650px;
+    margin:0 auto;
+  }
+
+  .org-department::before{
+    display:none;
+  }
+
+  .org-work-list{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+
+/* 모바일 */
+@media (max-width:640px){
+  .organization-wrap{
+    padding-top:0;
+  }
+
+  .org-ceo,
+  .org-director{
+    width:min(100%,260px);
+    min-width:0;
+    padding:19px 22px;
+  }
+
+  .org-partners{
+    width:min(100%,260px);
+  }
+
+  .org-department{
+    border-radius:18px;
+  }
+
+  .org-work-list{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+    padding:18px;
+  }
+
+  .org-work-list li{
+    padding:10px 8px 10px 18px;
+    font-size:.78rem;
+  }
+
+  .org-summary{
+    padding:16px 18px;
+    text-align:left;
+  }
+}
+
+@media (max-width:390px){
+  .org-work-list{
+    grid-template-columns:1fr;
+  }
+}
+
+     
+
     <div class="values-grid">
       <article class="value-card">
         <span class="value-circle value-circle-teal" aria-hidden="true">
