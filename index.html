@@ -1,3 +1,6 @@
+hcec_program_gallery.txt
+
+
 20260717 
 
 <!DOCTYPE html>
@@ -2512,6 +2515,183 @@ body.page-mode .info-bar.page-panel.is-page-active{
   }
 }
 
+
+/* =========================================================
+   Program image gallery — 4 items per page + lightbox
+   images 폴더에 이미지를 올리고 아래 JS의 programGalleryData에 추가하면
+   페이지 번호가 1, 2, 3... 자동으로 생성됩니다.
+   ========================================================= */
+.program-gallery-section{
+  width:100%;
+  margin:10px auto 58px;
+}
+.program-gallery-heading{
+  margin-bottom:24px;
+  text-align:center;
+}
+.program-gallery-heading h3{
+  color:var(--navy-deep);
+  font-size:clamp(1.25rem,2vw,1.65rem);
+  font-weight:800;
+  letter-spacing:-.025em;
+}
+.program-gallery-heading p{
+  margin-top:7px;
+  color:var(--ink-soft);
+  font-size:.92rem;
+}
+.program-gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+}
+.program-gallery-card{
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 14px 30px -24px rgba(38,52,74,.32);
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.program-gallery-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 22px 40px -25px rgba(38,52,74,.38);
+}
+.program-gallery-button{
+  display:block;
+  width:100%;
+  padding:0;
+  border:0;
+  background:#fff;
+  text-align:left;
+}
+.program-gallery-image-wrap{
+  position:relative;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:var(--navy-tint);
+}
+.program-gallery-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .4s ease;
+}
+.program-gallery-card:hover .program-gallery-image{
+  transform:scale(1.045);
+}
+.program-gallery-zoom{
+  position:absolute;
+  right:12px;
+  bottom:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:rgba(30,42,60,.78);
+  color:#fff;
+  font-size:18px;
+  backdrop-filter:blur(6px);
+}
+.program-gallery-title{
+  display:block;
+  min-height:62px;
+  padding:17px 16px;
+  color:var(--navy-deep);
+  font-size:.95rem;
+  font-weight:700;
+  line-height:1.45;
+  word-break:keep-all;
+}
+.program-gallery-pagination{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:28px;
+}
+.program-gallery-page-btn{
+  min-width:40px;
+  height:40px;
+  padding:0 12px;
+  border:1px solid var(--line-strong);
+  border-radius:999px;
+  background:#fff;
+  color:var(--ink-soft);
+  font-weight:800;
+}
+.program-gallery-page-btn:hover,
+.program-gallery-page-btn.is-active{
+  border-color:var(--teal-deep);
+  background:var(--teal-deep);
+  color:#fff;
+}
+.program-gallery-page-btn:disabled{
+  opacity:.38;
+  cursor:not-allowed;
+}
+.program-lightbox{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  background:rgba(18,27,40,.9);
+  backdrop-filter:blur(8px);
+}
+.program-lightbox[hidden]{display:none;}
+.program-lightbox-dialog{
+  position:relative;
+  width:min(100%,1100px);
+  max-height:92vh;
+  overflow:auto;
+  border-radius:20px;
+  background:#fff;
+  box-shadow:0 28px 70px rgba(0,0,0,.35);
+}
+.program-lightbox-image{
+  width:100%;
+  max-height:78vh;
+  object-fit:contain;
+  background:#111827;
+}
+.program-lightbox-caption{
+  padding:18px 64px 20px 22px;
+  color:var(--navy-deep);
+  font-weight:700;
+}
+.program-lightbox-close{
+  position:absolute;
+  top:12px;
+  right:12px;
+  z-index:2;
+  width:42px;
+  height:42px;
+  border:0;
+  border-radius:50%;
+  background:rgba(255,255,255,.94);
+  color:var(--navy-deep);
+  font-size:26px;
+  line-height:1;
+  box-shadow:0 8px 24px rgba(0,0,0,.2);
+}
+@media(max-width:900px){
+  .program-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:640px){
+  .program-gallery-section{margin-bottom:44px;}
+  .program-gallery-grid{grid-template-columns:1fr;}
+  .program-gallery-title{min-height:0;}
+  .program-lightbox{padding:12px;}
+  .program-lightbox-dialog{border-radius:14px;}
+  .program-lightbox-caption{padding:15px 56px 17px 16px;}
+}
+
 </style>
 </head>
 <body class="page-mode">
@@ -2843,6 +3023,23 @@ body.page-mode .info-bar.page-panel.is-page-active{
 <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>
 </svg>
 </a>
+</div>
+
+<div class="program-gallery-section" aria-label="현재 진행 중인 프로그램 이미지">
+  <div class="program-gallery-heading">
+    <h3>현재 진행 중인 프로그램</h3>
+    <p>이미지를 클릭하면 크게 볼 수 있습니다.</p>
+  </div>
+  <div class="program-gallery-grid" id="programGalleryGrid"></div>
+  <nav class="program-gallery-pagination" id="programGalleryPagination" aria-label="프로그램 이미지 페이지"></nav>
+</div>
+
+<div class="program-lightbox" id="programLightbox" hidden aria-hidden="true">
+  <div class="program-lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="programLightboxCaption">
+    <button type="button" class="program-lightbox-close" id="programLightboxClose" aria-label="확대 이미지 닫기">×</button>
+    <img class="program-lightbox-image" id="programLightboxImage" src="" alt="" />
+    <p class="program-lightbox-caption" id="programLightboxCaption"></p>
+  </div>
 </div>
 <div class="program-grid">
 <article class="program-card">
@@ -3474,6 +3671,123 @@ body.page-mode .info-bar.page-panel.is-page-active{
   };
 
   renderNotices();
+
+
+  /* ---------------------------------------------------------
+     Program gallery — 4 images per page + automatic pagination
+     새 이미지를 올린 뒤 아래 배열에 한 줄씩 추가하세요.
+     파일명과 확장자(.jpg/.png)는 GitHub images 폴더와 정확히 같아야 합니다.
+  --------------------------------------------------------- */
+  const programGalleryData = [
+    { src: 'images/KakaoTalk_20260713_211526402.jpg', title: '교육 프로그램 현장 01' },
+    { src: 'images/KakaoTalk_20260713_211526402_01.jpg', title: '교육 프로그램 현장 02' },
+    { src: 'images/KakaoTalk_20260713_211526402_02.jpg', title: '교육 프로그램 현장 03' },
+    { src: 'images/KakaoTalk_20260713_211526402_03.jpg', title: '교육 프로그램 현장 04' }
+  ];
+
+  const programGalleryGrid = document.getElementById('programGalleryGrid');
+  const programGalleryPagination = document.getElementById('programGalleryPagination');
+  const programLightbox = document.getElementById('programLightbox');
+  const programLightboxImage = document.getElementById('programLightboxImage');
+  const programLightboxCaption = document.getElementById('programLightboxCaption');
+  const programLightboxClose = document.getElementById('programLightboxClose');
+  const programItemsPerPage = 4;
+  let programGalleryPage = 1;
+
+  const openProgramLightbox = (item) => {
+    if (!programLightbox || !programLightboxImage || !programLightboxCaption) return;
+    programLightboxImage.src = item.src;
+    programLightboxImage.alt = item.title;
+    programLightboxCaption.textContent = item.title;
+    programLightbox.hidden = false;
+    programLightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    programLightboxClose?.focus();
+  };
+
+  const closeProgramLightbox = () => {
+    if (!programLightbox) return;
+    programLightbox.hidden = true;
+    programLightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  const renderProgramGallery = () => {
+    if (!programGalleryGrid || !programGalleryPagination) return;
+
+    const totalPages = Math.max(1, Math.ceil(programGalleryData.length / programItemsPerPage));
+    programGalleryPage = Math.min(programGalleryPage, totalPages);
+    const start = (programGalleryPage - 1) * programItemsPerPage;
+    const pageItems = programGalleryData.slice(start, start + programItemsPerPage);
+
+    programGalleryGrid.innerHTML = pageItems.map((item, index) => `
+      <article class="program-gallery-card">
+        <button type="button" class="program-gallery-button" data-gallery-index="${start + index}" aria-label="${item.title} 크게 보기">
+          <span class="program-gallery-image-wrap">
+            <img class="program-gallery-image" src="${item.src}" alt="${item.title}" loading="lazy">
+            <span class="program-gallery-zoom" aria-hidden="true">＋</span>
+          </span>
+          <span class="program-gallery-title">${item.title}</span>
+        </button>
+      </article>
+    `).join('');
+
+    const previousDisabled = programGalleryPage === 1 ? ' disabled' : '';
+    const nextDisabled = programGalleryPage === totalPages ? ' disabled' : '';
+    const numberButtons = Array.from({ length: totalPages }, (_, index) => {
+      const page = index + 1;
+      return `<button type="button" class="program-gallery-page-btn${page === programGalleryPage ? ' is-active' : ''}" data-gallery-page="${page}" aria-label="${page}페이지"${page === programGalleryPage ? ' aria-current="page"' : ''}>${page}</button>`;
+    }).join('');
+
+    programGalleryPagination.innerHTML = `
+      <button type="button" class="program-gallery-page-btn" data-gallery-move="prev" aria-label="이전 페이지"${previousDisabled}>‹</button>
+      ${numberButtons}
+      <button type="button" class="program-gallery-page-btn" data-gallery-move="next" aria-label="다음 페이지"${nextDisabled}>›</button>
+    `;
+
+    programGalleryGrid.querySelectorAll('[data-gallery-index]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = programGalleryData[Number(button.dataset.galleryIndex)];
+        if (item) openProgramLightbox(item);
+      });
+    });
+
+    programGalleryPagination.querySelectorAll('[data-gallery-page]').forEach((button) => {
+      button.addEventListener('click', () => {
+        programGalleryPage = Number(button.dataset.galleryPage);
+        renderProgramGallery();
+        programGalleryGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    programGalleryPagination.querySelector('[data-gallery-move="prev"]')?.addEventListener('click', () => {
+      if (programGalleryPage > 1) {
+        programGalleryPage -= 1;
+        renderProgramGallery();
+        programGalleryGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+
+    programGalleryPagination.querySelector('[data-gallery-move="next"]')?.addEventListener('click', () => {
+      if (programGalleryPage < totalPages) {
+        programGalleryPage += 1;
+        renderProgramGallery();
+        programGalleryGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  };
+
+  programLightboxClose?.addEventListener('click', closeProgramLightbox);
+  programLightbox?.addEventListener('click', (event) => {
+    if (event.target === programLightbox) closeProgramLightbox();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && programLightbox && !programLightbox.hidden) {
+      closeProgramLightbox();
+    }
+  });
+
+  renderProgramGallery();
 
   /* Google Calendar iframe is used for education schedules. */
 
